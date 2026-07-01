@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado da Programação</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #050816, #0f172a);
+            color: white;
+        }
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .hero {
+            max-width: 900px;
+        }
+
+        .tag {
+            color: #00f7ff;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: #00f7ff;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #00f7ff;
+            color: #050816;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 70px 10%;
+        }
+
+        h2 {
+            font-size: 35px;
+            margin-bottom: 30px;
+            color: #00f7ff;
+            text-align: center;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            border-radius: 18px;
+            border: 1px solid rgba(0, 247, 255, 0.3);
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(0, 247, 255, 0.4);
+        }
+
+        .card h3 {
+            color: #00f7ff;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .sobre {
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+            color: #cbd5e1;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #020617;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="hero">
+            <p class="tag">TECNOLOGIA • FUTURO • CARREIRA</p>
+            <h1>O Mercado da <span>Programação</span></h1>
+            <p>
+                A programação é uma das áreas mais importantes do mundo moderno.
+                Ela está presente em aplicativos, sites, jogos, inteligência artificial,
+                bancos, empresas e praticamente tudo que envolve tecnologia.
+            </p>
+            <a href="#areas" class="btn">Explorar áreas</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Por que aprender programação?</h2>
+        <p class="sobre">
+            Aprender programação abre portas para várias profissões no mercado de tecnologia.
+            Além de criar sistemas e sites, o programador desenvolve raciocínio lógico,
+            aprende a resolver problemas e pode trabalhar em empresas, projetos próprios
+            ou até de forma remota.
+        </p>
+    </section>
+
+    <section id="areas">
+        <h2>Áreas da Programação</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Desenvolvimento Web</h3>
+                <p>
+                    Criação de sites, sistemas online e páginas modernas usando HTML,
+                    CSS, JavaScript e outras tecnologias.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Aplicativos</h3>
+                <p>
+                    Desenvolvimento de apps para celular, como redes sociais,
+                    lojas virtuais, bancos digitais e jogos mobile.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Dados</h3>
+                <p>
+                    Área focada em analisar informações, criar relatórios e ajudar
+                    empresas a tomarem decisões inteligentes.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Inteligência Artificial</h3>
+                <p>
+                    Criação de sistemas capazes de aprender, responder perguntas,
+                    reconhecer imagens e automatizar tarefas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>O futuro da profissão</h2>
+        <p class="sobre">
+            O mercado de programação continua crescendo porque cada vez mais empresas
+            precisam de tecnologia. Quem estuda, pratica e monta projetos próprios
+            consegue se destacar e construir uma carreira com muitas possibilidades.
+        </p>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por Kayque • Projeto DevBook</p>
+    </footer>
+
+</body>
+</html>

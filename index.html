@@ -4,103 +4,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Folhas de estilo da página -->
+    <meta name="description" content="Página inicial do site FirstFront.">
+    <meta name="author" content="André Luferat">
+    <meta name="keywords" content="HTML, CSS, JavaScript, programação">
+    <meta name="theme-color" content="#050816">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" href="img/logotipo01.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>FirstFront</title>
+
     <style>
-        /* Reset para padronizar estilos com alguns navegadores */
         * {
             box-sizing: border-box;
             outline: none;
         }
 
-        /* Fonte padrão da página */
         html,
         body {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
             font-size: 16px;
-            /* O estilo acima define uma unidade "rem", ou seja, 1rem = 16px */
+            background:
+                radial-gradient(circle at top left, rgba(0, 247, 255, .18), transparent 35%),
+                linear-gradient(135deg, #050816, #0f172a);
+            color: white;
         }
 
-        /*  Padroniza os links */
         a {
-            color: steelblue;
+            color: #00f7ff;
             text-decoration: none;
+            transition: .3s;
         }
 
         a:hover {
-            color: orangered;
+            color: white;
         }
 
-        /* wrap - Container principal */
+        #top {
+            position: absolute;
+            top: 0;
+        }
+
         #wrap {
-            /* Define a largura máxima em pixels */
             max-width: 1024px;
-
-            /* Centraliza o bloco */
+            min-height: 100vh;
             margin: auto;
+            padding: 0 .8rem;
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
         }
 
-        /* Estiliza <header> */
         #header {
-            background-color: darkgreen;
-            color: pink;
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border: 1px solid rgba(0, 247, 255, .3);
+            border-radius: 0 0 1rem 1rem;
+            box-shadow: 0 0 25px rgba(0, 247, 255, .2);
+        }
+
+        #header img {
+            display: block;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            border: 2px solid #00f7ff;
+            object-fit: cover;
+            box-shadow: 0 0 18px rgba(0, 247, 255, .7);
         }
 
         #header h1 {
             margin: 0;
+            color: #00f7ff;
+            font-size: 2.3rem;
+            text-shadow: 0 0 15px #00f7ff;
         }
 
-        #header img {
-            height: 4rem;
-            width: auto;
-            border-radius: 50%;
-        }
-
-        /* Estiliza menu principal */
         #nav {
-            background-color: black;
+            background: rgba(2, 6, 23, .85);
+            display: flex;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid rgba(0, 247, 255, .3);
+            box-shadow: 0 0 20px rgba(0, 247, 255, .15);
         }
 
-        /* Estiliza links do menu principal */
         #nav a {
+            flex: 1;
             color: white;
-            text-decoration: none;
             text-transform: uppercase;
+            font-weight: bold;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #nav a i {
+            font-size: 2rem;
+            color: #00f7ff;
+            text-shadow: 0 0 12px #00f7ff;
+        }
+
+        #nav a:hover {
+            background: #00f7ff;
+            color: #050816;
+        }
+
+        #nav a:hover i {
+            color: #050816;
+            text-shadow: none;
+        }
+
+        main {
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(0, 247, 255, .3);
+            box-shadow: 0 0 25px rgba(0, 247, 255, .15);
+            flex-grow: 1;
+        }
+
+        main h2 {
+            margin-top: 0;
+            color: #00f7ff;
+            font-size: 2rem;
+            text-shadow: 0 0 10px rgba(0, 247, 255, .7);
+        }
+
+        main h4 {
+            color: white;
+            margin-top: 1.5rem;
+        }
+
+        main p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        main ul {
+            padding-left: 1.2rem;
+        }
+
+        main li {
+            margin: .5rem 0;
+            color: #cbd5e1;
+        }
+
+        .destaque {
+            border: 1px solid rgba(0, 247, 255, .4);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 1rem;
+            background: rgba(0, 247, 255, .08);
+            box-shadow: 0 0 15px rgba(0, 247, 255, .15);
+        }
+
+        #footer {
+            background: rgba(2, 6, 23, .95);
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 1rem 1rem 0 0;
+            border: 1px solid rgba(0, 247, 255, .3);
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 247, 255, .15);
+        }
+
+        #footer div {
             font-weight: bold;
         }
 
-        /* Quando o ponteiro do mouse estiver aqui */
-        #nav a:hover {
-            color: yellow;
+        #footer a {
+            font-size: 2rem;
+            color: #00f7ff;
+            padding: .8rem;
         }
 
-        /* main - Conteúdo principal da página */
-        main {
-            background-color: beige;
-            padding: 10px;
+        #footer a:hover {
+            background: #00f7ff;
+            color: #050816;
         }
 
-        /* Estilza rodapé */
-        #footer {
-            background-color: grey;
-            color: white;
-        }
-
-        /* Ajusta título e o último parágrafo da página */
         main>h2:first-child,
         main>p:last-child {
             margin: 0;
             padding: .75rem 0;
         }
+
+        @media (max-width: 600px) {
+            #header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #header h1 {
+                font-size: 1.8rem;
+            }
+
+            #nav {
+                flex-direction: column;
+            }
+
+            #footer {
+                font-size: .9rem;
+            }
+        }
     </style>
-    <title>Document</title>
 </head>
 
 <body>
 
-    <!-- Elemento principal do layout -->
+    <a id="top"></a>
+
     <div id="wrap">
 
-        <!-- Cabeçalho com logo e nome do site -->
         <header id="header">
             <a href="index.html">
                 <img src="img/logotipo.jpg" alt="Logotipo de FirstFront">
@@ -108,36 +241,44 @@
             <h1>FirstFront</h1>
         </header>
 
-        <!-- Menu principal -->
         <nav id="nav">
-            <a href="index.html">Início</a>
-            <a href="contacts.html">Contatos</a>
-            <a href="about.html">Sobre</a>
+            <a href="index.html"><i class="fa-solid fa-house fa-fw"></i><span>Início</span></a>
+            <a href="contacts.html"><i class="fa-solid fa-comments fa-fw"></i><span>Contatos</span></a>
+            <a href="about.html"><i class="fa-solid fa-circle-info fa-fw"></i><span>Sobre</span></a>
         </nav>
 
-        <!-- Conteúdo -->
         <main>
-            <h2>Título desta página</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, sint provident facilis sequi natus
-                asperiores distinctio! Debitis, saepe blanditiis voluptas nostrum ut quidem quas a quis quam aperiam
-                tempora facere?</p>
-            <h4>Links inúteis:</h4>
+            <h2>Interface Futurística</h2>
+
+            <p>
+                Este projeto mantém a estrutura da aula do professor, mas recebeu um visual mais moderno,
+                com fundo escuro, efeito neon, cards translúcidos e layout com Flexbox.
+            </p>
+
+            <h4>Links úteis:</h4>
             <ul>
                 <li><a href="https://google.com">Google</a></li>
                 <li><a href="https://facebook.com">Facebook</a></li>
                 <li><a href="https://instagram.com">Instagram</a></li>
             </ul>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam impedit consequatur facilis omnis quo
-                dolores libero placeat non praesentium commodi obcaecati fuga rerum corrupti, nam tenetur qui nobis odit
-                dignissimos!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis tempora magni et provident rem
-                laudantium saepe, nihil a autem illum nemo, architecto numquam totam labore repellat, error placeat.
-                Ullam, eligendi?</p>
+
+            <div class="destaque">
+                <h3>Sticky Footer ativo</h3>
+                <p>
+                    O rodapé fica no final da tela quando há pouco conteúdo, mas desce normalmente quando
+                    a página cresce. Tudo isso usando Flexbox no container principal.
+                </p>
+            </div>
+
+            <p>
+                Também foi mantido o Font Awesome, que permite usar ícones modernos no menu e no rodapé.
+            </p>
         </main>
 
-        <!-- Rodapé -->
         <footer id="footer">
-            &copy; 2026 Joca da Silva
+            <a href="index.html"><i class="fa-solid fa-house fa-fw"></i></a>
+            <div>&copy; 2026 Kayque — FirstFront</div>
+            <a href="#top"><i class="fa-solid fa-circle-up fa-fw"></i></a>
         </footer>
 
     </div>
